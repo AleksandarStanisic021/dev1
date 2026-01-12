@@ -1,0 +1,4 @@
+{
+    "python.analysis.displayEnglishDiagnostics": true,
+    "python.analysis.enableAsyncProgram": true
+}
