@@ -1,4 +1,5 @@
 {
     "python.analysis.displayEnglishDiagnostics": true,
-    "python.analysis.enableAsyncProgram": true
+    "python.analysis.enableAsyncProgram": true,
+    "editor.formatOnSave": true
 }
