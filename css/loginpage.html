@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fefefe;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #444;
+            color: #fefefe;
+        }
+
+        button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>
+            Login Form
+        </h2>
+        <form>
+            <input type='email' id='email' name='email' placeholder='Enter Email' required>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
