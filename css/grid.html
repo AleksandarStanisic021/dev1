@@ -14,11 +14,48 @@
             color: #fefefe;
             font-family: 'Courier New', Courier, monospace;
         }
+
+        h1,
+        p {
+            padding: 10px;
+        }
+
+
+        .item {
+            background-color: #333;
+            border-radius: 5px;
+            border: 2px solid #000;
+            padding: 1rem;
+            margin: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
     </style>
 </head>
 
 <body>
     <h1>Grid Layout Example </h1>
+    <div class="grid">
+
+        <div class="item">
+            <h2>Item 1</h2>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+
+        <div class="item">
+            <h2>Item 2</h2>
+            <p>loerm ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="item">
+            <h2>Item 3</h2>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </div>
 
 </body>
 
