@@ -4,35 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flexbox</title>
+    <title>Document</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+
             margin: 0;
-            padding: 0px;
-            background-color: #1e1d1d;
-            color: #ffffff;
+            padding: 20PX;
+            font-family: Arial, sans-serif;
+            background-color: #1C1C2C;
+            color: #fefefe;
         }
 
-        h1 {
-            margin-bottom: 10px;
+        .container {
+            border: 1px solid #444;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #2C2C3C;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
         }
 
-        .content {
+        .item {
+            background-color: #4CAF50;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #333;
-            width: 100px;
-            height: 100px;
+
+        }
+
+        .flex-container {
+
+            background-color: rgb(245, 223, 194);
+            height: 500px;
+            max-width: 500px;
+            display: flex;
+        }
+
+        .item-1 {
+
+            background-color: red;
+        }
+
+        .item-2 {
+
+            background-color: blue;
+        }
+
+        .item-3 {
+            background-color: green;
+        }
+
+        .item-4 {
+            background-color: orange;
+        }
+
+        .item-5 {
+            background-color: purple;
+        }
+
+        .item-6 {
+            background-color: pink;
         }
     </style>
 </head>
 
 <body>
-    <h1>Flexbox</h1>
-    <div class="content">lala</div>
+    <h1>Flexbox Example </h1>
+    <div class="container">
+        <div class="flex-container" style="flex-wrap: wrap;">
+            <div class=" item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+
+        </div>
+    </div>
 </body>
 
 </html>
