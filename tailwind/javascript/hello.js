@@ -20,3 +20,5 @@ user.age = 20;
 // Using 'typeof' to check the data type, or simply logging the value.
 console.log(typeof user.age); // Output: "number"
 console.log(typeof null); // Output: 20
+
+console.log(2 - 1 + 2); // Output: 3
