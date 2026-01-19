@@ -3,14 +3,195 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salmon Hunt — Responsive</title>
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-gray-700 text-white">
-    <h1 class="sm:text-3xl sm:text-red-900 text-sm bg-green-700">Responsive Design
-    </h1>
+<body class="min-h-screen bg-salmon-cream text-salmon-dark">
+    <header class="bg-salmon text-white shadow">
+        <nav class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+            <a class="font-bold text-lg">Salmon Hunt</a>
+            <button id="nav-toggle" class="md:hidden p-2 rounded bg-white text-salmon">☰</button>
+            <ul id="nav-menu" class="hidden md:flex space-x-4 items-center">
+                <li><a class="hover:underline text-white" href="#gallery">Gallery</a></li>
+                <li><a class="hover:underline text-white" href="#tips">Tips</a></li>
+                <li><a class="hover:underline text-white" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6">
+        <!-- Hero -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-12">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-salmon-dark">Salmon Hunt</h1>
+                <p class="mt-4 text-gray-700">Explore the best salmon runs, techniques, and gear — all dressed in salmon
+                    tones.</p>
+                <div class="mt-6 flex gap-4">
+                    <a class="bg-salmon text-white px-4 py-2 rounded shadow hover:opacity-90" href="#gallery">View
+                        Gallery</a>
+                    <a class="border border-salmon px-4 py-2 rounded text-salmon hover:bg-salmon-cream"
+                        href="#tips">Hunt Guide</a>
+                </div>
+                <p class="mt-4 text-sm text-gray-600">Images from Unsplash (randomized queries).</p>
+            </div>
+            <div>
+                <img loading="lazy" decoding="async"
+                    src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=1200&q=80"
+                    alt="Fisherman and salmon" class="rounded-lg w-full h-auto shadow-lg"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="rounded-lg w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                    style="display:none">Image unavailable</div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="mt-8">
+            <h2 class="text-2xl font-semibold mb-4 text-salmon-dark">Salmon Hunt Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://plus.unsplash.com/premium_photo-1676511249826-2adf52caabee?auto=format&fit=crop&w=600&q=80"
+                        alt="Beach fisherman" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Beach fisherman — Photo: Fellipe Ditadi on <a
+                            href="https://unsplash.com/photos/UkpDgCFE82I" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://plus.unsplash.com/premium_photo-1725467481401-e9a1ee6decce?auto=format&fit=crop&w=600&q=80"
+                        alt="Close up salmon" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Local illustration — Placeholder</figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=600&q=80"
+                        alt="Fisherman close" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Local illustration — Placeholder</figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=600&q=80"
+                        alt="Smoked salmon" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Smoked — Photo: Sasan Rashtipour on <a
+                            href="https://unsplash.com/photos/IPk2WD-kglo" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=600&q=80"
+                        alt="The catch" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">The catch — Photo: Sasan Rashtipour on <a
+                            href="https://unsplash.com/photos/IPk2WD-kglo" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://plus.unsplash.com/premium_photo-1725467481401-e9a1ee6decce?auto=format&fit=crop&w=600&q=80"
+                        alt="Close up salmon" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Close-up — Photo: Natalia Blauth on <a
+                            href="https://unsplash.com/photos/6m7KlxG8xlY" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <!-- Added man / fisherman-focused images -->
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=600&q=80"
+                        alt="Man fisherman" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Fisherman — Photo: Sasan Rashtipour on <a
+                            href="https://unsplash.com/photos/IPk2WD-kglo" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://plus.unsplash.com/premium_photo-1676511249826-2adf52caabee?auto=format&fit=crop&w=600&q=80"
+                        alt="Man with salmon" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">Man with salmon — Photo: Fellipe Ditadi on <a
+                            href="https://unsplash.com/photos/UkpDgCFE82I" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+
+                <figure class="bg-white rounded-lg overflow-hidden shadow">
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1524558985486-6fdf222cef34?auto=format&fit=crop&w=600&q=80"
+                        alt="Man fishing from boat" class="w-full h-48 object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full h-48 bg-salmon-cream flex items-center justify-center text-sm text-gray-600"
+                        style="display:none">Image unavailable</div>
+                    <figcaption class="p-3 text-sm text-gray-600">On the boat — Photo: Sasan Rashtipour on <a
+                            href="https://unsplash.com/photos/IPk2WD-kglo" target="_blank" rel="noopener"
+                            class="underline">Unsplash</a></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <section id="tips" class="mt-8">
+            <h2 class="text-2xl font-semibold mb-4 text-salmon-dark">Hunting Tips</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="p-4 bg-white rounded-lg shadow">Know the runs and seasons.</li>
+                <li class="p-4 bg-white rounded-lg shadow">Use proper gear and check local regs.</li>
+                <li class="p-4 bg-white rounded-lg shadow">Practice catch-and-release when appropriate.</li>
+                <li class="p-4 bg-white rounded-lg shadow">Prep the catch: cleaning and smoking tips.</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="mt-8 mb-12">
+            <h2 class="text-2xl font-semibold mb-4 text-salmon-dark">Get in touch</h2>
+            <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input class="p-3 rounded border border-gray-300" placeholder="Name" />
+                <input class="p-3 rounded border border-gray-300" placeholder="Email" />
+                <textarea class="sm:col-span-2 p-3 rounded border border-gray-300" rows="4"
+                    placeholder="Message"></textarea>
+                <button class="bg-salmon text-white px-4 py-2 rounded">Send</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="p-6 text-center text-sm text-gray-600 bg-salmon-cream border-t border-salmon">© 2026 Salmon Hunt —
+        Images via Unsplash</footer>
+
+    <script>
+        const btn = document.getElementById('nav-toggle');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
