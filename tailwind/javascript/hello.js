@@ -19,3 +19,4 @@ user.age = 20;
 // Fixed: 'sizeof' is not a built-in JavaScript function.
 // Using 'typeof' to check the data type, or simply logging the value.
 console.log(typeof user.age); // Output: "number"
+console.log(typeof null); // Output: 20
