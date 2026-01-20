@@ -35,20 +35,23 @@ class Animal {
     this.#color = color;
     this.name = name;
   }
-  #age; // Private field
-  #color; // Private field
-  getAge() {
+  get age() {
     return this.#age;
   }
-  getColor() {
-    return this.#color;
+  set age(value) {
+    this.#age = value;
   }
+  #age; // Private field
+  #color; // Private field
 }
+
 Animal.prototype.speak = function () {
   return this.name + " makes a sound.";
 };
 let dog = new Animal("Buddy", "Red");
-console.log(dog.getAge());
-console.log(dog.getColor());
+dog.age = 15;
+
+console.log(dog.age); // Output: 15
+
 console.log(dog.speak()); // Output: Buddy makes a sound.
 console.log(Animal.prototype);
