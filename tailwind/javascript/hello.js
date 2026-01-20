@@ -51,10 +51,10 @@ console.log(res);
 
 function f3(c) {
   return function () {
-    return "DO FROM INNER FUNCTION";
+    return "DO FROM INNER FUNCTION" + c;
   };
 }
 
-let r = f3("sasa");
+let r = f3(" sasa");
 
 console.log(r());
