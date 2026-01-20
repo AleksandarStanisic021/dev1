@@ -37,3 +37,23 @@ console.log([]); // Output: []
 console.log({}); // Output: {}
 console.log(Symbol("id")); // Output: Symbol(id)
 console.log(42); // Output: 42
+
+function f1(a) {
+  console.log(a);
+}
+
+function f2(a) {
+  return a;
+}
+let res = f2(f1(5));
+
+console.log(res);
+
+function f3() {
+  let x = 10;
+  return function f4() {
+    console.log("inner function" + " " + x);
+  };
+}
+let innerFunc = f3();
+innerFunc();
