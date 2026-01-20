@@ -39,21 +39,22 @@ console.log(Symbol("id")); // Output: Symbol(id)
 console.log(42); // Output: 42
 
 function f1(a) {
-  console.log(a);
+  return "hello world" + a;
 }
 
-function f2(a) {
-  return a;
+function f2(b) {
+  return b;
 }
-let res = f2(f1(5));
 
+let res = f2(f1(" sasa "));
 console.log(res);
 
-function f3() {
-  let x = 10;
-  return function f4() {
-    console.log("inner function" + " " + x);
+function f3(c) {
+  return function () {
+    return "DO FROM INNER FUNCTION";
   };
 }
-let innerFunc = f3();
-innerFunc();
+
+let r = f3("sasa");
+
+console.log(r());
