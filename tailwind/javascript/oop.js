@@ -9,5 +9,46 @@ let laptop = {
   __proto__: compouter,
   model: "X1000",
 };
+Object.getPrototypeOf(laptop); // Accessing the prototype
+console.log(laptop.__proto__, laptop.model); // Output: TechBrand X1000
+console.log(laptop.getBrand()); // Inherited method
 
-console.log(laptop.__proto__); // Output: TechBrand
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+Car.prototype.getDetails = function () {
+  return this.make + " " + this.model;
+};
+let myCar = new Car("AutoMaker", "Speedster");
+console.log(myCar.getDetails()); // Output: AutoMaker Speedster
+Car.prototype.addYear = function (year) {
+  this.year = year;
+};
+myCar.addYear(2022);
+console.log(myCar.year); // Output: 2022
+console.log(Car.__proto__);
+
+class Animal {
+  constructor(name, color) {
+    this.#age = 0;
+    this.#color = color;
+    this.name = name;
+  }
+  #age; // Private field
+  #color; // Private field
+  getAge() {
+    return this.#age;
+  }
+  getColor() {
+    return this.#color;
+  }
+}
+Animal.prototype.speak = function () {
+  return this.name + " makes a sound.";
+};
+let dog = new Animal("Buddy", "Red");
+console.log(dog.getAge());
+console.log(dog.getColor());
+console.log(dog.speak()); // Output: Buddy makes a sound.
+console.log(Animal.prototype);
