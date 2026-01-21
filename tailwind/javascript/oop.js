@@ -166,3 +166,21 @@ console.log(account.balance);
 account.withdraw(200);
 console.log(account.balance); // Output: 1300
 account.withdraw(2000); // Output: Insufficient funds
+
+class Employee {
+  #salary;
+  constructor(name, salary) {
+    this.name = name;
+    this.#salary = salary;
+  }
+  get salary() {
+    return this.#salary;
+  }
+  set salary(value) {
+    this.#salary = value;
+  }
+}
+let emp = new Employee("John", 50000);
+console.log(emp.salary);
+emp.salary = 60000;
+console.log(emp.salary); // Output: 60000
