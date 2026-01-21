@@ -110,5 +110,58 @@ Car.prototype.startEngine = function () {
   return "Engine started";
 };
 let myCar = new Car("Toyota", "Corolla");
-console.log(myCar.getDetails());
-console.log(myCar.startEngine());
+//console.log(myCar.getDetails());
+//console.log(myCar.startEngine());
+
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
+Book.prototype.getInfo = function () {
+  return `${this.title} by ${this.author}`;
+};
+let myBook = new Book("1984", "George Orwell");
+console.log(myBook.getInfo());
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+  get area() {
+    return this.width * this.height;
+  }
+  set area(value) {
+    this.width = Math.sqrt(value);
+    this.height = Math.sqrt(value);
+  }
+}
+let rect = new Rectangle(4, 5);
+console.log(rect.area); // Output: 20
+rect.area = 36;
+console.log(rect.width);
+
+class BankAccount {
+  #balance;
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+  get balance() {
+    return this.#balance;
+  }
+  deposit(amount) {
+    this.#balance += amount;
+  }
+  withdraw(amount) {
+    if (amount <= this.#balance) {
+      this.#balance -= amount;
+    } else {
+      console.log("Insufficient funds");
+    }
+  }
+}
+let account = new BankAccount(1000);
+account.deposit(500);
+account.withdraw(200);
+console.log(account.balance); // Output: 1300
+account.withdraw(2000); // Output: Insufficient funds
