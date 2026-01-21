@@ -162,7 +162,7 @@ class BankAccount {
 }
 let account = new BankAccount(1000);
 account.deposit(500);
-console.log(account.balance);\
+console.log(account.balance);
 account.withdraw(200);
 console.log(account.balance); // Output: 1300
 account.withdraw(2000); // Output: Insufficient funds
