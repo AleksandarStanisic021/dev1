@@ -47,3 +47,27 @@ console.log(counter1());
 console.log(counter1());
 console.log(counter1());
 console.log(counter2());
+
+function fetchdata() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      success = false;
+      if (success) resolve("data fetched");
+      else reject("error occurred");
+    }, 2000);
+  });
+}
+
+async function fetchdataAsync() {
+  try {
+    let response = await fetchdata();
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+fetchdataAsync();
+
+fetchdata()
+  .then((res) => console.log(res))
+  .catch((err) => console.error(err));
