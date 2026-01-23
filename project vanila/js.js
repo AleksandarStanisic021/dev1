@@ -28,8 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     li.addEventListener("click", (e) => {
       if (e.target.classList.contains("delete-btn")) {
         tasks = tasks.filter((t) => t.id !== task.id);
-        saveTasks();
+
         li.remove();
+        saveTasks();
       }
     });
     taskList.appendChild(li);
